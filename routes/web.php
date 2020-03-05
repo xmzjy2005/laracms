@@ -21,6 +21,8 @@ Route::group(['middleware'=>'check.mail'],function(){
 
 
 Auth::routes();
+//github hook
+Route::get('/git', 'GitController@index')->name('git');
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::any('/upload', 'UploadController@make');
