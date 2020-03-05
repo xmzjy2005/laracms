@@ -8,7 +8,7 @@
  */
 
 define('LARAVEL_START', microtime(true));
-
+echo '#'.__LINE__.'#';var_dump(1);exit;
 /*
 |--------------------------------------------------------------------------
 | Register The Auto Loader
