@@ -8,7 +8,7 @@ use Modules\Wx\Entities\WxConfig;
 
 class WechatController extends Controller
 {
-    //ssdd
+    //ssddddd
     public function handler(WxConfig $wxConfig){
         $config = array_merge(include base_path('config') . '/wechat.php', $wxConfig->pluck('name', 'value')->toArray());
         WeChat::config($config)->valid();
