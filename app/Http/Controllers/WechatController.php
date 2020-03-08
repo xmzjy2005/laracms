@@ -16,6 +16,5 @@ class WechatController extends Controller
         $wechat = new WeChat();
         $wechat->config($config);
         $rs = $wechat->valid();
-        dd($rs);
     }
 }
