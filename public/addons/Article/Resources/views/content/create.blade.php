@@ -100,12 +100,15 @@
                         <div class="form-group row pt-0">
 
                                 <div class="col-12">
-                                    <hd-simditor name="content" url="/upload-simditor">{{ $content['content']??old('content') }}</hd-simditor>
-                                    @if ($errors->has('content'))
-                                        <span class="text-danger">
-                                <strong>{{ $errors->first('content') }}</strong>
-                            </span>
-                                    @endif
+                                    <textarea id="container" name="content" style="height:300px;width:100%;">{{ $content['content']??old('content') }}</textarea>
+                                    <script>
+                                        require(['hdjs'], function (hdjs) {
+                                            hdjs.ueditor('container', {hash: 2, data: 'hd'}, function (editor) {
+                                                console.log('编辑器执行后的回调方法1')
+                                            });
+                                            console.log(1);
+                                        })
+                                    </script>
                                 </div>
 
                         </div>
