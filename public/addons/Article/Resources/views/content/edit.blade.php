@@ -42,14 +42,25 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="thumb" class="col-12 col-sm-3 col-form-label text-md-right">缩略图</label>
+                            <label for="thumb" class="col-12 col-sm-3 col-form-label text-md-right" >缩略图</label>
                             <div class="col-12 col-lg-9">
-                                <hd-image name="thumb" id="thumb" image-url="{!! $content['thumb']??old('thumb') !!}"></hd-image>
-                                @if ($errors->has('thumb'))
-                                    <span class="text-danger">
-                                <strong>{{ $errors->first('thumb') }}</strong>
-                            </span>
-                                @endif
+                                <input type="text" name="thumb" hidden value="{!! $content['thumb']??asset('image/default_img.jpeg') !!}">
+                                <img src="{!! $content['thumb']??old('thumb') !!}" alt="" onclick="upImagePc()" class="img-fluid" style="width: 50px">
+                                <script>
+                                    require(['hdjs','bootstrap']);
+                                    //上传图片
+                                    function upImagePc() {
+                                        require(['hdjs'], function (hdjs) {
+
+                                            hdjs.image(function (images) {
+                                                //上传成功的图片，数组类型
+                                                $("[name='thumb']").val(images[0]);
+                                                $(".img-fluid").attr('src', images[0]);
+                                            })
+                                        });
+                                    }
+                                </script>
+
                             </div>
                         </div>
                         <div class="form-group row">

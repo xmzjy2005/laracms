@@ -29,7 +29,7 @@
             //上传文件后台地址
             uploader : '/upload?',
             //获取文件列表的后台地址
-            filesLists : '/filesLists.php?',
+            filesLists : '',
             //require.js配置项（可为空）
             requireJs:{paths:{},shim:{}},
         };
