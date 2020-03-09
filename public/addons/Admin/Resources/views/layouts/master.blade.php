@@ -19,11 +19,23 @@
     <link rel="stylesheet" type="text/css"
           href="{{asset('theme/beagle/lib/material-design-icons/css/material-design-iconic-font.min.css')}}"/>
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
     <link rel="stylesheet" href="{{asset('theme/beagle/css/app.css')}}" type="text/css"/>
+    <link rel="stylesheet" href="{{asset('addons/Admin/Resources/css/admin.css')}}" type="text/css"/>
+    {{--hdjs--}}
+    <script>
+        window.hdjs={
+            //组件目录必须绝对路径
+            base : '/plugin/hdjs',
+            //上传文件后台地址
+            uploader : '/upload?',
+            //获取文件列表的后台地址
+            filesLists : '/filesLists.php?',
+            //require.js配置项（可为空）
+            requireJs:{paths:{},shim:{}},
+        };
+    </script>
+    <script src="/plugin/hdjs/require.js"></script>
+    <script src="/plugin/hdjs/config.js"></script>
     @yield('head')
 </head>
 <body>
@@ -52,7 +64,7 @@
                             <a href="pages-profile.html" class="dropdown-item">
                                 <span class="icon mdi mdi-face"></span> 修改密码
                             </a>
-                           
+
                             <a href="javascript:void(0);" class="dropdown-item" onclick="event.preventDefault();document.getElementById('logout').submit()">
                                 <span class="icon mdi mdi-power"></span> 退出
                             </a>
@@ -347,21 +359,24 @@
     </nav>
 </div>
 {{--<script src="{{asset('theme/beagle/lib/jquery/jquery.min.js')}}" type="text/javascript"></script>--}}
-<script src="{{mix('js/app.js')}}"></script>
-<script src="{{asset('plugin/menu.js')}}"></script>
-<script src="{{asset('theme/beagle/lib/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js')}}"
-        type="text/javascript"></script>
-<script src="{{asset('theme/beagle/js/app.js')}}" type="text/javascript"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        //initialize the javascript
-        App.init();
-    });
+{{--<script src="{{mix('js/app.js')}}"></script>--}}
+{{--<script src="{{asset('plugin/menu.js')}}"></script>--}}
+{{--<script src="{{asset('theme/beagle/lib/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js')}}"--}}
+{{--type="text/javascript"></script>--}}
+{{--<script src="{{asset('theme/beagle/js/app.js')}}" type="text/javascript"></script>--}}
+{{--<script type="text/javascript">--}}
+{{--$(document).ready(function () {--}}
+{{--//initialize the javascript--}}
+{{--App.init();--}}
+{{--});--}}
+{{--</script>--}}
+<script>
+    require(['bootstrap','/plugin/pjax/pjax.js']);
 </script>
 {{--pjax--}}
 {{--pjax--}}
-<script src="https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
-<script src="{{asset('plugin/pjax/pjax.js')}}"></script>
+{{--<script src="https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>--}}
+{{--<script src="{{asset('plugin/pjax/pjax.js')}}"></script>--}}
 <link rel="stylesheet" href="{{asset('plugin/pjax/pjax.css')}}">
 @yield('scripts')
 </body>
