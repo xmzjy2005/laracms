@@ -12,6 +12,12 @@
         'permission' => '',
         'url' => '/wx/wx_config',
       ),
+      1 => 
+      array (
+        'title' => 'weixincaidan管理',
+        'permission' => '',
+        'url' => '/wx/wxmenu',
+      ),
     ),
   ),
 );

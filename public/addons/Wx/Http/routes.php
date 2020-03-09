@@ -12,3 +12,9 @@ Route::group(['middleware' => ['web','auth:admin'], 'prefix' => 'wx', 'namespace
 //function () {
 //    Route::resource('wx_config', 'WxConfigController');
 //});
+ 
+//wxmenu-route
+Route::group(['middleware' => ['web'],'prefix'=>'wx','namespace'=>"Modules\Wx\Http\\Controllers"], 
+function () {
+    Route::resource('wxmenu', 'WxmenuController');
+});
