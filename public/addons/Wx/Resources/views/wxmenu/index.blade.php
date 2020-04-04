@@ -1,11 +1,11 @@
 @extends('admin::layouts.master')
 @section('content')
     <div class="card" id="app">
-        <div class="card-header">weixincaidan管理</div>
+        <div class="card-header">微信菜单管理</div>
         <div class="tab-container">
             <ul role="tablist" class="nav nav-tabs">
-                <li class="nav-item"><a href="/wx/wxmenu" class="nav-link active">weixincaidan列表</a></li>
-                <li class="nav-item"><a href="/wx/wxmenu/create" class="nav-link">添加weixincaidan</a></li>
+                <li class="nav-item"><a href="/wx/wxmenu" class="nav-link active">微信菜单列表</a></li>
+                <li class="nav-item"><a href="/wx/wxmenu/create" class="nav-link">添加微信菜单</a></li>
             </ul>
             <div class="card card-contrast card-border-color-success">
                 <div class="card-body">

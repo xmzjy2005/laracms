@@ -1,10 +1,10 @@
 @extends('admin::layouts.master')
 @section('content')
     <div class="card" id="app">
-        <div class="card-header">weixincaidan管理</div>
+        <div class="card-header">微信菜单管理</div>
         <ul role="tablist" class="nav nav-tabs">
-            <li class="nav-item"><a href="/wx/wxmenu" class="nav-link">weixincaidan列表</a></li>
-            <li class="nav-item"><a href="#" class="nav-link active">修改weixincaidan</a></li>
+            <li class="nav-item"><a href="/wx/wxmenu" class="nav-link">微信菜单列表</a></li>
+            <li class="nav-item"><a href="#" class="nav-link active">修改微信菜单</a></li>
         </ul>
         <form action="/wx/wxmenu/{{$wxmenu['id']}}" method="post">
             <div class="card-body card-body-contrast">

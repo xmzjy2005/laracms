@@ -10,6 +10,7 @@ class WxmenuController extends Controller
     //显示列表
     public function index()
     {
+       
         $data = Wxmenu::paginate(10);
         return view('wx::wxmenu.index', compact('data'));
     }

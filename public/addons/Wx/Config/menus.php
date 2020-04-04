@@ -14,7 +14,7 @@
       ),
       1 => 
       array (
-        'title' => 'weixincaidan管理',
+        'title' => '微信菜单管理',
         'permission' => '',
         'url' => '/wx/wxmenu',
       ),
